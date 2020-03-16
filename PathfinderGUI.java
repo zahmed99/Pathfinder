@@ -1,4 +1,4 @@
 
-public class PathfinderGUI {
+class PathfinderGUI {
 
 }

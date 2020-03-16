@@ -5,7 +5,6 @@ class Grid {
     public Grid(int size) {
         this.size = size;
         matrix = new Tile[size][size];
-        int c = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) { 
                 matrix[i][j] = new Tile(i, j);
@@ -26,9 +25,12 @@ class Grid {
     }
 
     public void printGrid() {
+        Tile start = new Tile(0, 0);
+        Tile end = new Tile(size - 1, size - 1);
         for (Tile[] arr : matrix) {
             for (Tile t : arr) {
-                System.out.printf("%4d,%d ", t.getX(), t.getY());
+                t.calculateCost(start, end);
+                System.out.printf("%4d,%d", t.getX(), t.getY());
             }
             System.out.println();
         }
