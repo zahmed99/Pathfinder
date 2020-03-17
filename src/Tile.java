@@ -1,3 +1,5 @@
+package src;
+
 class Tile implements Comparable<Tile>{
     private int xPos; //x-position of the tile on the grid
     private int yPos; //y-position of the tile on the grid

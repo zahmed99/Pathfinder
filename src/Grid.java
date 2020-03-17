@@ -1,3 +1,5 @@
+package src;
+
 class Grid {
     private int size;
     private Tile[][] matrix;
